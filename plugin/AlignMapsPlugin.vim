@@ -152,11 +152,13 @@ if !hasmapto('<Plug>AM_t:')		|map <unique> <Leader>t:	<Plug>AM_t:|endif
 if !hasmapto('<Plug>AM_t;')		|map <unique> <Leader>t;	<Plug>AM_t;|endif
 if !hasmapto('<Plug>AM_t<')		|map <unique> <Leader>t<	<Plug>AM_t<|endif
 if !hasmapto('<Plug>AM_t=')		|map <unique> <Leader>t=	<Plug>AM_t=|endif
+if !hasmapto('<Plug>AM_t{')		|map <unique> <Leader>t{	<Plug>AM_t{|endif
 if !hasmapto('<Plug>AM_ts,')	|map <unique> <Leader>ts,	<Plug>AM_ts,|endif
 if !hasmapto('<Plug>AM_ts:')	|map <unique> <Leader>ts:	<Plug>AM_ts:|endif
 if !hasmapto('<Plug>AM_ts;')	|map <unique> <Leader>ts;	<Plug>AM_ts;|endif
 if !hasmapto('<Plug>AM_ts<')	|map <unique> <Leader>ts<	<Plug>AM_ts<|endif
 if !hasmapto('<Plug>AM_ts=')	|map <unique> <Leader>ts=	<Plug>AM_ts=|endif
+if !hasmapto('<Plug>AM_ts{')	|map <unique> <Leader>ts{	<Plug>AM_ts{|endif
 if !hasmapto('<Plug>AM_w=')		|map <unique> <Leader>w=	<Plug>AM_w=|endif
 if !hasmapto('<Plug>AM_t?')		|map <unique> <Leader>t?	<Plug>AM_t?|endif
 if !hasmapto('<Plug>AM_t~')		|map <unique> <Leader>t~	<Plug>AM_t~|endif
@@ -176,12 +178,14 @@ map <silent> <script> <Plug>AM_t:		<SID>WS:AlignCtrl mIp1P1=l :<CR>:'a,.Align<CR
 map <silent> <script> <Plug>AM_t;		<SID>WS:AlignCtrl mIp0P1=l ;<CR>:'a,.Align<CR>:sil 'y,'zs/\( *\);/;\1/ge<CR><SID>WE
 map <silent> <script> <Plug>AM_t<		<SID>WS:AlignCtrl mIp0P0=l <<CR>:'a,.Align<CR><SID>WE
 map <silent> <script> <Plug>AM_t=		<SID>WS:call AlignMaps#Equals()<CR><SID>WE
+map <silent> <script> <Plug>AM_t{		<SID>WS:AlignCtrl mIp1P1=l {<CR>:'a,.Align<CR><SID>WE
 map <silent> <script> <Plug>AM_ts,		<SID>WS:AlignCtrl mIp0P1=l #\zs<CR>:'a,.Align<CR><SID>WE
 map <silent> <script> <Plug>AM_ts,		<SID>WS:AlignCtrl mIp0P1=l ,\zs<CR>:'a,.Align<CR><SID>WE
 map <silent> <script> <Plug>AM_ts:		<SID>WS:AlignCtrl mIp1P1=l :\zs<CR>:'a,.Align<CR><SID>WE
 map <silent> <script> <Plug>AM_ts;		<SID>WS:AlignCtrl mIp1P1=l ;\zs<CR>:'a,.Align<CR><SID>WE
 map <silent> <script> <Plug>AM_ts<		<SID>WS:AlignCtrl mIp1P1=l <\zs<CR>:'a,.Align<CR><SID>WE
 map <silent> <script> <Plug>AM_ts=		<SID>WS:AlignCtrl mIp1P1=l =\zs<CR>:'a,.Align<CR><SID>WE
+map <silent> <script> <Plug>AM_ts{		<SID>WS:AlignCtrl mIp0P1=l {\zs<CR>:'a,.Align<CR><SID>WE
 map <silent> <script> <Plug>AM_w=		<SID>WS:'a,'zg/=/s/\s\+\([*/+\-%<Bar>&\~^]\==\)/ \1/e<CR>:'a,'zg/=/s@ \+\([*/+\-%<Bar>&\~^]\)=@\1=@ge<CR>:'a,'zg/=/s/==/\="\<Char-0x0f>\<Char-0x0f>"/ge<CR>:'a,'zg/=/s/!=/\="!\<Char-0x0f>"/ge<CR>'zk:AlignCtrl mWp1P1=l =<CR>:AlignCtrl g =<CR>:'a,'z-1g/=/Align<CR>:'a,'z-1g/=/s@\([*/+\-%<Bar>&\~^!=]\)\( \+\)=@\2\1=@ge<CR>:'a,'z-1g/=/s/\( \+\);/;\1/ge<CR>:'a,'z-1v/^\s*\/[*/]/s/\/[*/]/@&@/e<CR>:'a,'z-1v/^\s*\/[*/]/s/\*\//@&/e<CR>'zk:call AlignMaps#StdAlign(1)<cr>:'y,'zs/^\(\s*\) @/\1/e<CR>:'a,'z-1g/=/s/\xff/=/ge<CR>:'y,'zg/=/s/ @//eg<CR><SID>WE
 map <silent> <script> <Plug>AM_t?		<SID>WS:AlignCtrl mIp0P0=l ?<CR>:'a,.Align<CR>:.,'zs/ \( *\);/;\1/ge<CR><SID>WE
 map <silent> <script> <Plug>AM_t~		<SID>WS:AlignCtrl mIp0P0=l ~<CR>:'a,.Align<CR>:'y,'zs/ \( *\);/;\1/ge<CR><SID>WE
